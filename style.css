@@ -1,0 +1,334 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #F7F7F7;
+
+}
+*::selection{
+    color:#fff;
+    background-color: #000;
+}
+#nav{
+    width: 100%;
+    position: fixed;
+    z-index: 9;
+    padding: 25px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+#nav #nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:40px;
+}
+#links{
+    padding: 10px;
+}
+#nav-part2 #links a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    margin:0 20px;
+}
+#nav-part1{
+    height: 82px;
+    overflow: hidden;
+}
+#nav-part1 svg{
+    display: block;
+}
+#nav-part2 #icons i{
+    font-size: 18px;
+    margin: 0 20px;
+    font-weight: 100;
+}
+#icons{
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #F7F7F7;
+}
+#cursor{
+    height: 180px;
+    width: 180px;
+    background-color: lightgray;
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%,-50%) scale(0);
+}
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 0 1vh;
+    padding-top: 19vh;
+}
+#page1 h1{
+    font-size: 15.8vw;
+    font-family: futura;
+    text-transform: uppercase;
+    line-height: 14vw;
+    letter-spacing: -8px;
+}
+#vidio-container{
+    height: 100vh;
+    width: 100%;
+    margin-top: 1vw;
+    position: relative;
+}
+#vidio-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#vidio-container #play{
+    padding: 3vw 2.2vw;
+    background-color: #000;
+    color: #fff;
+    font-style: 1.3vw;
+    font-family: futura;
+    position: fixed;
+    border-radius: 50px;
+    opacity: 0;
+    scale: 0;
+} 
+
+#page2{
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vw 1vw;
+}
+.elem{
+    height: 100%;
+    width: 31%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.1
+}
+.elem .dets{
+    height: 60px;
+    width: 70%;
+    position: absolute;
+    z-index: 9;
+    border-radius: 50px;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    font-family: futura;
+    color: rgb(69, 68, 68);
+    cursor: pointer;
+
+}
+.elem .dets h1{
+    margin-bottom: 3vh;
+    font-size: 40px;
+}
+.elem .dets h6{
+    font-weight: 200;
+    font-size:small;
+    font-family: fantasy-lite;
+}
+.elem .dets h5{
+    font-weight: 100;
+    font-size:small;
+}
+.elem .dets h3{
+    font-weight: 10;
+    font-size: 10px;;
+    margin-bottom: 7px;
+}
+.elem .dets:hover{
+    height: 200px;
+    visibility: visible;
+}
+
+#page3{
+    min-height: 120vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.child{
+    height: 54vh;
+    width: 38vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-direction: column;
+}
+.child img{
+    height: 100%;
+}
+.child img:nth-child(2){
+    scale: 0.1;
+}
+.child h6{
+    font-size: 10px;
+    font-family: fantasy-lite;
+}
+.child p{
+    font-size: smaller;
+    font-family: fantasy-lite;
+    text-align: center;
+}
+
+
+@media (max-width:600px){
+    #page1 {
+        min-height: 70vh;
+        width: 100%;
+        padding: 0 3vw;
+        padding-top: 25vh;
+
+    }
+    #nav{
+        width: 100%;
+        position: fixed;
+        z-index: 9;
+        padding: 15px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    #nav #nav-part2{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap:40px;
+    }
+    #links{
+        padding: 10px;
+        display: none;
+    }
+    #nav-part2 #links a{
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        margin:0 20px;
+    }
+    #nav-part1{
+        height: 67px;
+        overflow: hidden;
+    }
+    #nav-part1 svg{
+        display: block;
+        height: 67px;
+        width: 80px;
+    }
+    #nav #twogoodlogo{
+        height: 40px;
+        margin-left: -20px;
+    }
+    #nav-part2 #icons i{
+        font-size: 18px;
+        margin: 0 20px;
+        font-weight: 100;
+    }
+    #icons{
+        padding: 15px;
+        border-radius: 50px;
+        cursor: pointer;
+        background-color: #F7F7F7;
+    }
+    #page1 h1 {
+        font-size: 15.5vw;
+        letter-spacing: -3px;
+    }
+    #vidio-container{
+        height: 25vh;
+        margin-top: 3vw;
+    }
+    #vidio-container #play{
+        padding: 9.5vw 7.2vw;
+        font-style: 4.5vw;
+        position: fixed;
+        opacity: 1;
+        scale: 1;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    } 
+
+    #page2{
+        min-height: 100vh;
+        width: 100vw;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5vw 3vw;
+        flex-direction: column;
+    }
+    .elem{
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 3vw;
+    }
+    .elem .dets{
+        height: 40px;
+        width: 70%;
+        position: absolute;
+        z-index: 9;
+        border-radius: 50px;
+        background-color: palegoldenrod;
+        color: rgb(69, 68, 68);
+    }
+    .elem .dets:hover{
+        height: 40px;
+    }
+    #page3{
+        min-height: 120vh;
+        width: 100vw;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .child{
+        height: 54vh;
+        width: 88vw;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 15vw;
+    }
+    .child img{
+        height: 100%;
+    }
+    .child img:nth-child(2){
+        scale: 0.1;
+    }
+    
+}
